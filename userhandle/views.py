@@ -21,11 +21,10 @@ class RegisterView(APIView):
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             response = {
-                'message':'Register Sucessfully',
+                'message':'Registered Sucessfully',
                 'data':serializer.data
             }
             return Response(date=response,
                              status=status.HTTP_201_CREATED)
 
         return Response(data=response,status=status.HTTP_400_BAD_REQUEST)
-
