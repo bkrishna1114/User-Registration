@@ -24,7 +24,7 @@ class RegisterView(APIView):
                 'message':'Registered Sucessfully',
                 'data':serializer.data
             }
-            return Response(date=response,
+            return Response(data=response,
                              status=status.HTTP_201_CREATED)
 
         return Response(data=response,status=status.HTTP_400_BAD_REQUEST)

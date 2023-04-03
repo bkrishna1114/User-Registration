@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.db import models
-from django.contrib.auth.base_user import  AbstractBaseUser
+from django.contrib.auth.base_user import AbstractBaseUser
 
 class user(AbstractBaseUser):
     first_name = models.CharField(max_length=100,blank=False)

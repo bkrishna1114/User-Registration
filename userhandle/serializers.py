@@ -5,7 +5,7 @@ from django.db import models
 class userserializer(serializers.ModelSerializer):
     class Meta:
         model = user
-        fields='__all__'
+        fields=['id','first_name','last_name','email','phone_number','address','pincode','company_name','password']
         extra_kwargs ={
             'password':{"write_only":True}
         }
